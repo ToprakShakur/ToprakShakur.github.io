@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SmartBits</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		/* Estilos para el menú hamburguesa */
+		.menu-icon {
+			display: none;
+		}
+		nav {
+			background-color: #333;
+			color: #fff;
+			text-align: center;
+			padding: 20px 0;
+		}
+		nav ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+		}
+		nav li {
+			margin-right: 20px;
+		}
+		nav a {
+			color: #fff;
+			text-decoration: none;
+		}
+		nav a:hover {
+			border-bottom: 2px solid #fff;
+		}
+		@media screen and (max-width: 768px) {
+			.menu-icon {
+				display: inline-block;
+				cursor: pointer;
+				float: right;
+				padding: 28px 20px;
+				position: relative;
+				user-select: none;
+			}
+			.menu-icon .navicon {
+				background: #fff;
+				display: block;
+				height: 2px;
+				position: relative;
+				width: 18px;
+			}
+			.menu-icon .navicon:before,
+			.menu-icon .navicon:after {
+				background: #fff;
+				content: '';
+				display: block;
+				height: 100%;
+				position: absolute;
+				width: 100%;
+			}
+			.menu-icon .navicon:before {
+				top: 5px;
+			}
+			.menu-icon .navicon:after {
+				top: -5px;
+			}
+			nav {
+				display: none;
+				padding: 20px 0;
+			}
+			nav.active {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				background-color: #333;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				right: 0;
+				z-index: 1;
+			}
+			nav.active li {
+				margin-right: 0;
+			}
+			nav.active a {
+				color: #fff;
+				font-size: 1.2em;
+			}
+			nav.active a:hover {
+				border-bottom: none;
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<!-- Encabezado de la página -->
+	<header>
+		<h1 style="text-align:center;">SmartBits</h1>
+		<div class="menu-icon" onclick="toggleMenu();">
+			<div class="navicon"></div>
+		</div>
+	</header>
+
+	<!-- Menú de navegación -->
+	<nav id="menu">
+		<ul>
+			<li><a href="articulos-legales.html">Articulos legales</a></li>
+		</ul>
+	</nav>
+
+	<!-- Texto sobre -->
+	<main>
+		<center>
+			<h2>Nosotros</h2>
+				<p>SmartBits es una plataforma en línea que conecta a compradores 
+					y vendedores de todo el mundo, ofreciendo una amplia variedad 
+					de productos de calidad a precios competitivos.</p>
+			<h3>Misión</h3>
+				<p>Nuestra misión es brindar una experiencia de compra en línea 
+					segura y confiable para todos nuestros clientes, permitiéndoles
+					encontrar fácilmente los productos que necesitan y realizar 
+					transacciones de manera sencilla. Para lograrlo, trabajamos 
+					con vendedores de confianza, que ofrecen productos de alta 
+					calidad y cumplen con nuestras rigurosas normas de calidad 
+					y servicio.</p>
+			<h3>Visión</h3>
+				<p>Nuestra visión es convertirnos en la plataforma líder en línea 
+					de venta de productos electrónicos para computadoras, creando 
+					un ecosistema global que conecte a compradores y vendedores de 
+					todo el mundo. Con el tiempo, esperamos expandir nuestra oferta 
+					de productos para incluir una amplia gama de artículos electrónicos, 
+					convirtiéndonos en la tienda en línea de referencia para todos los 
+					entusiastas de la tecnología.</p>
+			<h3>Valores</h3>
+					<p>En SmartBits, valoramos la transparencia, la ética y la 
+						innovación. Nos esforzamos por ofrecer a nuestros clientes 
+						la mejor experiencia de compra en línea posible, manteniéndonos 
+						siempre a la vanguardia de las últimas tendencias y tecnologías. </p>
+				</center>
+			
+	</main>
